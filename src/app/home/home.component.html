@@ -1,0 +1,22 @@
+<app-header></app-header>
+<app-search></app-search>
+<app-not-found [visible]="!medicines || medicines.length <=0" resetLinkText="Reset Search"></app-not-found>
+<marquee behavior="scroll" direction="left"> <h3>Thank You For Visiting !!!!! </h3> </marquee>
+
+<ul>
+    <li *ngFor="let medicine of medicines">
+        <a routerLink="/medicine/{{medicine.id}}">
+        <img src="{{medicine.imageUrl}}" alt="medicine img">
+        <div class="content">
+            <div class="name">
+                {{medicine.name}}
+            </div>
+
+        <div class="price"> 
+            {{medicine.price|currency}}
+        </div>
+
+        </div>
+        </a>
+    </li>
+</ul>

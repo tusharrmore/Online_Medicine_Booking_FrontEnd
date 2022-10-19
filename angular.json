@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Online_Medicine_Booking": {
+    "Online": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/online-medicine-booking",
+            "outputPath": "dist/online",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Online_Medicine_Booking:build:production"
+              "browserTarget": "Online:build:production"
             },
             "development": {
-              "browserTarget": "Online_Medicine_Booking:build:development"
+              "browserTarget": "Online:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Online_Medicine_Booking:build"
+            "browserTarget": "Online:build"
           }
         },
         "test": {
@@ -97,5 +97,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "5bffe626-4744-4b68-8f2b-306ad3a117a3"
   }
 }

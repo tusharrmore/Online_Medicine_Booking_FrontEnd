@@ -1,0 +1,22 @@
+<app-not-found [visible]="!medicine" notFoundMessage="Product Not Found !" resetLinkText="Go To Homepage">
+</app-not-found>
+
+<div *ngIf="medicine" class="container">
+    <img [src]="medicine.imageUrl" [alt]="medicine.name">
+
+        <div class="details">
+            <div class="header">
+                <span class="name">
+                    {{medicine.name}}
+                </span>
+            </div>
+            <div class="price">
+                <span>
+                    {{medicine.price| currency}}
+                </span>
+            </div>
+            <button (click)="addToCart(medicine)">Add to Cart</button>
+
+        </div>
+
+</div>

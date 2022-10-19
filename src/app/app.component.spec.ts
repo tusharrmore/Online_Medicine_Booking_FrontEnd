@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'Online_Medicine_Booking'`, () => {
+  it(`should have as title 'OnlineMedicine'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Online_Medicine_Booking');
+    expect(app.title).toEqual('OnlineMedicine');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('Online_Medicine_Booking app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('OnlineMedicine app is running!');
   });
 });
